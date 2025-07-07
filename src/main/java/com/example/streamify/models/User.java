@@ -3,8 +3,8 @@ package com.example.streamify.models;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "users")
-public class user {
+@Document(collection = "user")
+public class User {
 
     @Id
     private String id;
@@ -13,10 +13,9 @@ public class user {
     private String password;
     private long phno;
 
-    // Constructors
-    public user() {}
+    public User() {}
 
-    public user(String id, String name, String email, String password, long phno) {
+    public User(String id, String name, String email, String password, long phno) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -24,7 +23,6 @@ public class user {
         this.phno = phno;
     }
 
-    // Getters & Setters
     public String getId() {
         return id;
     }
